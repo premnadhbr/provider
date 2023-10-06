@@ -29,6 +29,10 @@ class Home extends StatelessWidget {
               },
             ),
             Text(Provider.of<ProviderDemo>(context).test),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text('change Value'),
+            ),
           ],
         ),
       ),
