@@ -9,6 +9,7 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("entire rebuild");
     return Scaffold(
       body: Center(
         child: Column(
@@ -28,9 +29,13 @@ class Home extends StatelessWidget {
                 );
               },
             ),
-            Text(Provider.of<ProviderDemo>(
-              context,
-            ).test),
+            Consumer<ProviderDemo>(
+              builder: (context, value, child) {
+                return Text(Provider.of<ProviderDemo>(
+                  context,
+                ).test);
+              },
+            ),
             ElevatedButton(
               onPressed: () {
                 Provider.of<ProviderDemo>(context, listen: false)
