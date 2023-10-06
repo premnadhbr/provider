@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:provider_tips/provider/provider.dart';
 
 import 'page2.dart';
 
@@ -25,7 +27,8 @@ class Home extends StatelessWidget {
                   ),
                 );
               },
-            )
+            ),
+            Text(Provider.of<ProviderDemo>(context).test),
           ],
         ),
       ),

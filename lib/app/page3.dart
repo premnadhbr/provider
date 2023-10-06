@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:provider_tips/app/Home.dart';
+
+import '../provider/provider.dart';
 
 class Page3 extends StatelessWidget {
   const Page3({super.key});
@@ -24,7 +27,8 @@ class Page3 extends StatelessWidget {
                   ),
                 );
               },
-            )
+            ),
+            Text(Provider.of<ProviderDemo>(context).test),
           ],
         ),
       ),

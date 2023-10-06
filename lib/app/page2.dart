@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:provider_tips/app/page3.dart';
+
+import '../provider/provider.dart';
 
 class Page2 extends StatelessWidget {
   const Page2({super.key});
@@ -23,7 +26,8 @@ class Page2 extends StatelessWidget {
                   ),
                 );
               },
-            )
+            ),
+            Text(Provider.of<ProviderDemo>(context).test),
           ],
         ),
       ),
