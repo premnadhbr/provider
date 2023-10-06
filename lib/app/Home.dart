@@ -31,9 +31,8 @@ class Home extends StatelessWidget {
             ),
             Consumer<ProviderDemo>(
               builder: (context, value, child) {
-                return Text(Provider.of<ProviderDemo>(
-                  context,
-                ).test);
+                print('consumer onlyy rebuilding');
+                return Text(value.test);
               },
             ),
             ElevatedButton(
@@ -43,6 +42,8 @@ class Home extends StatelessWidget {
               },
               child: Text('change Value'),
             ),
+            SizedBox(height: 10),
+            Provider.of<ProviderDemo>(context).widget(),
           ],
         ),
       ),
